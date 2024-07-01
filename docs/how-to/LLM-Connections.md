@@ -154,24 +154,6 @@ llm = HuggingFaceHub(
 )
 ```
 
-## Unify Integration
-Take advantage of Unify's centralized platform for easy access multiple LLM endpoints.
-```python
-from langchain_unify.chat_models import ChatUnify
-
-llm = ChatUnify(
-    model="llama-3-8b-chat@fireworks-ai", # change endpoints as you like
-    unify_api_key="<YOUR_UNIFY-API-KEY>",
-)
-
-agent = Agent(
-    role="Math professor",
-    goal="Provide solutions to math problems.",
-    backstory="You solve math problems elegantly.",
-    llm=llm
-)
-```
-
 ## OpenAI Compatible API Endpoints
 Switch between APIs and models seamlessly using environment variables, supporting platforms like FastChat, LM Studio, and Mistral AI.
 
